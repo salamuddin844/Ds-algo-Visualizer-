@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tree properties</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="treeproperties.css" />
+    <script src="treeproperties.js" defer></script>
+    <script src="http://d3js.org/d3.v5.min.js" defer></script>
+    <!-- Font utilities Starts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+    </style>
+    <link
+      href="//db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      @import url("//db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro");
+    </style>
+    <!-- Font utilities Ends -->
+
+    <!-- Bootstrap utilities Starts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Bootstrap utilities Ends -->
+
+    <!-- Arrow utilites starts  -->
+    <link rel="stylesheet" href="domarrow.css" />
+    <script src="domarrow.js"></script>
+    <!-- Arrow utilites ends  -->
+  </head>
+  <body>
+    <!-- Navbar starts  -->
+    <nav class="navbar navbar-expand bg-dark navbar-dark">
+      <div class="container">
+        <button
+          class="btn btn-dark"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <span class="toggler-button">Complexity</span>
+        </button>
+        <a
+          href="../index.html"
+          class="navbar-brand page-header navbar-page-header"
+        >
+          <span class="page-header-left">DS & Algo</span>
+          <span class="nav-page-header-right">Visualizer</span>
+        </a>
+        <ul class="navbar-nav">
+          <!-- <h2
+              class="nav-item page-title navbar-brand page-header navbar-page-header"
+            >
+              Breadth Fast Search
+            </h2> -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../Register/register.html" class="nav-link">Register</a>
+            </li>
+            <li class="nav-item">
+              <a href="../Login/login.html" class="nav-link">Login</a>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
+
+    <!-- Left-sidebard starts  -->
+    <div
+      class="offcanvas offcanvas-start bg-dark"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <h5
+          class="offcanvas-title text-white"
+          id="offcanvasWithBothOptionsLabel"
+        ></h5>
+
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body text-white">
+        <div class="card" style="width: 22rem">
+          <div class="card-body">
+            <h5 class="card-title text-dark">Tree Complexity Anlysis</h5>
+            <h6 class="card-subtitle mt-4 mb-2 text-muted">
+              Parent searching complexity: O(1)
+            </h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Child searching complexity: O(1)
+            </h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Leaf searching complexity: O(V)
+            </h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Root searching complexity: O(1)
+            </h6>
+            <h6 class="card-subtitle mt-4 mb-2 text-muted">Note that,</h6>
+            <h6 class="card-subtitle mb-2 text-muted">V = number of nodes</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Left-sidebard ends  -->
+
+    <div class="flex-container">
+      <div class="button-container">
+        <button class="root-node" onclick="rootnode()">Root</button>
+        <button class="internal-node" onclick="internalnode()">Internal</button>
+        <button class="leaf-button" onclick="leaf()">leaf</button>
+        <input
+          type="text"
+          name=""
+          id="input_field"
+          class="form-control form-control-lg fs-5 text-center bg-dark bg-opacity-50 text-white fw-normal border-1 rounded-0 shadow-sm p-1 border border-white"
+          required
+          value="node"
+          onclick="handleInputField()"
+        />
+        <button class="parent-button" onclick="parent()">parent</button>
+
+        <input
+          type="text"
+          name=""
+          id="input_field1"
+          class="form-control form-control-lg fs-5 text-center bg-dark bg-opacity-50 text-white fw-normal border-1 rounded-0 shadow-sm p-1 border border-white"
+          required
+          value="node"
+          onclick="handleInputField1()"
+        />
+        <button class="child-node" onclick="childnode()">child</button>
+      </div>
+      <div class="graph-container">
+        <!-- node conncetion  -->
+
+        <div class="graph-screen containter">
+          <connection from="#node1" to="#node2" tail></connection>
+          <connection from="#node1" to="#node3" tail></connection>
+          <connection from="#node2" to="#node4" tail></connection>
+          <connection from="#node2" to="#node5" tail></connection>
+          <connection from="#node3" to="#node6" tail></connection>
+          <connection from="#node3" to="#node7" tail></connection>
+          <connection from="#node4" to="#node8" tail></connection>
+          <connection from="#node4" to="#node9" tail></connection>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

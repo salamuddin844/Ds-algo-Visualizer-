@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>code-html</title>
+  </head>
+  <body>
+    <script>
+      var graph = new Map();
+
+      graph.set(1, []);
+      graph.set(2, []);
+      graph.set(3, []);
+      graph.set(4, []);
+      graph.set(5, []);
+      graph.set(6, []);
+      graph.set(7, []);
+
+      graph.get(1).push(2);
+      graph.get(1).push(3);
+      graph.get(2).push(4);
+      graph.get(2).push(5);
+      graph.get(3).push(6);
+      graph.get(3).push(7);
+      graph.get(4).push(8);
+      graph.get(4).push(9);
+
+      for (let u of graph.keys()) {
+        var ans = u + " -> ";
+        graph.get(u).forEach((v) => {
+          ans += v + " ";
+        });
+        console.log(ans);
+      }
+
+      //   Creating a Queue
+      class Queue {
+        constructor() {
+          this.items = {};
+          this.front = 0;
+          this.rear = 0;
+        }
+        enqueue(item) {
+          this.items[this.rear] = item;
+          this.rear++;
+        }
+        dequeue() {
+          const item = this.items[this.front];
+          delete this.items[this.front];
+          this.front++;
+          return item;
+        }
+        peek() {
+          return this.items[this.front];
+        }
+        get size() {
+          return this.rear - this.front;
+        }
+        isEmpty() {
+          return this.rear == 0;
+        }
+      }
+
+      console.log("\nBreadth First Search: ");
+      function bfs(startingNode) {
+        // create a visited object
+        var visited = {};
+
+        // Create an object for queue
+        var q = new Queue();
+
+        var size = 7,
+          total_undefined = 0,
+          cnt = 0;
+
+        // add the starting node to the queue
+        console.log(q);
+        visited[startingNode] = true;
+        q.enqueue(startingNode);
+
+        // loop until queue is empty
+        while (!q.isEmpty()) {
+          // get the element from the queue
+          var getQueueElement = q.dequeue();
+          console.log(q);
+
+          if (total_undefined > size) {
+            break;
+          }
+
+          if (typeof graph.get(getQueueElement) !== "undefined") {
+            graph.get(getQueueElement).forEach((neigh) => {
+              if (!visited[neigh]) {
+                visited[neigh] = true;
+                q.enqueue(neigh);
+              }
+            });
+          } else {
+            console.log("Tot : " + ++total_undefined);
+          }
+        }
+      }
+      bfs(1);
+    </script>
+  </body>
+</html>

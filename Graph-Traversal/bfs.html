@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Breadth First Search Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="bfs.css" />
+    <script src="http://d3js.org/d3.v5.min.js" defer></script>
+    <script src="bfs.js" defer></script>
+
+    <!-- Font utilities Starts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+    </style>
+    <link
+      href="//db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      @import url("//db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro");
+    </style>
+    <!-- Font utilities Ends -->
+
+    <!-- Bootstrap utilities Starts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Bootstrap utilities Ends -->
+
+    <!-- Arrow utilites starts  -->
+    <link rel="stylesheet" href="domarrow.css" />
+    <script src="domarrow.js"></script>
+    <!-- Arrow utilites ends  -->
+  </head>
+  <body>
+    <!-- Navbar starts  -->
+    <nav class="navbar navbar-expand bg-dark navbar-dark">
+      <div class="container">
+        <button
+          class="btn btn-dark"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <span class="toggler-button">Complexity</span>
+        </button>
+        <a
+          href="../index.html"
+          class="navbar-brand page-header navbar-page-header"
+        >
+          <span class="page-header-left">DS & Algo</span>
+          <span class="nav-page-header-right">Visualizer</span>
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="../Register/register.html" class="nav-link">Register</a>
+          </li>
+          <li class="nav-item">
+            <a href="../Login/login.html" class="nav-link">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
+
+    <!-- Left-sidebard starts  -->
+    <div
+      class="offcanvas offcanvas-start bg-dark"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <h5
+          class="offcanvas-title text-white"
+          id="offcanvasWithBothOptionsLabel"
+        ></h5>
+
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body text-white">
+        <div class="card" style="width: 22rem">
+          <div class="card-body">
+            <h5 class="card-title text-dark">BFS Complexity Anlysis</h5>
+            <h6 class="card-subtitle mt-4 mb-2 text-muted">
+              Time complexity: O(V + E)
+            </h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Space complexity: O(V)
+            </h6>
+            <h6 class="card-subtitle mt-4 mb-2 text-muted">Note that,</h6>
+            <h6 class="card-subtitle mb-2 text-muted">V = number of nodes</h6>
+            <h6 class="card-subtitle mb-2 text-muted">E = number of edges</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Left-sidebard ends  -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            necessitatibus mollitia eaque incidunt ab! Praesentium atque
+            suscipit unde sunt eligendi eos voluptatibus? Suscipit, facere? Eum
+            pariatur distinctio commodi ratione molestias nisi perspiciatis?
+            Rerum repudiandae, est dicta soluta ea modi exercitationem dolore
+            consequuntur vitae. Enim dolore reprehenderit eaque assumenda
+            exercitationem natus molestias ex dicta atque debitis deleniti
+            maiores quo animi recusandae id, temporibus quae nihil quam autem ad
+            vitae architecto ipsa neque! A illum deleniti odio vel nisi
+            veritatis pariatur vitae tempora delectus quisquam, consequatur cum
+            facilis ea magni ipsa ab similique. Veniam fuga nihil provident
+            ipsa, sequi est earum repellendus?
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-dark">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid gap-1">
+      <button
+        class="btn btn-primary start-button p-2"
+        type="button"
+        onclick="startAlgo()"
+      >
+        Start Algorithm
+      </button>
+      <!-- <button
+        class="btn btn-primary edit-edges-button p-2"
+        type="button"
+        onclick="addEdges()"
+      >
+        Add Edges
+      </button> -->
+    </div>
+    <div class="graph-screen containter">
+      <connection from="#node1" to="#node2" tail></connection>
+      <connection from="#node1" to="#node3" tail></connection>
+      <connection from="#node2" to="#node4" tail></connection>
+      <connection from="#node2" to="#node5" tail></connection>
+      <connection from="#node3" to="#node6" tail></connection>
+      <connection from="#node3" to="#node7" tail></connection>
+      <connection from="#node4" to="#node8" tail></connection>
+      <connection from="#node4" to="#node9" tail></connection>
+    </div>
+  </body>
+</html>

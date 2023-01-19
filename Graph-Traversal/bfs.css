@@ -1,0 +1,232 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page header customization - starts*/
+.page-heading {
+  text-align: center;
+  padding: 1%;
+}
+
+.page-header {
+  font-family: "Munro", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.page-header-left {
+  color: #003049;
+}
+
+.page-header-right {
+  color: #ffba08;
+}
+
+.color-scheme-1 {
+  color: #54bd68;
+}
+
+.color-scheme-2 {
+  color: #da523c;
+}
+
+.color-scheme-3 {
+  color: #4b65ba;
+}
+
+.color-scheme-4 {
+  color: #d65775;
+}
+.color-scheme-5 {
+  color: #2ebcd2;
+}
+.color-scheme-6 {
+  color: #a9d50e;
+}
+.color-scheme-7 {
+  color: #fe9130;
+}
+
+.page-heading p {
+  font-size: 25px;
+}
+
+.navbar-page-header .page-header-left {
+  color: white;
+}
+
+.navbar-nav > li > a,
+.toggler-button {
+  /* font-family: Roboto; */
+  font-weight: 500;
+  /* font-weight: bolder; */
+}
+
+.page-title {
+  /* font-family: Roboto; */
+  font-family: sans-serif;
+  font-weight: 500;
+}
+/* Page header customization - ends */
+
+/* Graph editor starts  */
+svg {
+  background-color: #fff;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg:not(.active):not(.ctrl) {
+  cursor: crosshair;
+}
+
+path.link {
+  fill: none;
+  stroke: #000;
+  stroke-width: 4px;
+  cursor: default;
+}
+
+svg:not(.active):not(.ctrl) path.link {
+  cursor: pointer;
+}
+
+path.link.selected {
+  stroke-dasharray: 10, 2;
+}
+
+path.link.dragline {
+  pointer-events: none;
+}
+
+path.link.hidden {
+  stroke-width: 0;
+}
+
+circle.node {
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+circle.node.reflexive {
+  stroke: #000 !important;
+  stroke-width: 2.5px;
+}
+
+text {
+  font: 12px sans-serif;
+  pointer-events: none;
+}
+
+text.id {
+  text-anchor: middle;
+  font-weight: bold;
+}
+/* Graph editor ends  */
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  position: absolute; /* Responsible for making the element draggable*/
+}
+
+.node-styles {
+  padding: 10px;
+  cursor: move;
+  background-color: #f72585;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#node1 {
+  top: 22%;
+  left: 50%;
+}
+#node2 {
+  top: 37%;
+  left: 40%;
+}
+#node3 {
+  top: 37%;
+  left: 60%;
+}
+#node4 {
+  top: 52%;
+  left: 33%;
+}
+#node5 {
+  top: 52%;
+  left: 47%;
+}
+#node6 {
+  top: 52%;
+  left: 53%;
+}
+#node7 {
+  top: 52%;
+  left: 67%;
+}
+#node8 {
+  top: 67%;
+  left: 26%;
+}
+#node9 {
+  top: 67%;
+  left: 40%;
+}
+
+/* Change node color animation starts */
+
+.change-node-color {
+  animation-name: change-color;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes change-color {
+  0% {
+    background-color: #f72585;
+  }
+  85% {
+    background-color: #3a0ca3;
+  }
+  90% {
+    background-color: #cbced4;
+    scale: 1.2;
+  }
+  100% {
+    background-color: #3a0ca3;
+    scale: 1;
+  }
+}
+/* Change node color animation ends */
+
+/* Graph-screen modification  */
+.graph-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.start-button,
+.edit-graph-button {
+  z-index: 2;
+}

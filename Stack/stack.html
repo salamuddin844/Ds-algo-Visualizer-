@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stack.css" />
+    <script src="stack.js" defer></script>
+
+    <!-- fonts utilites starts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- fonts utilites ends -->
+
+    <!-- Font utilities Starts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+    </style>
+    <link
+      href="//db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      @import url("//db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro");
+    </style>
+    <!-- Font utilities Ends -->
+
+    <!-- Bootstrap utilities Starts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Bootstrap utilities Ends -->
+
+    <title>Stack Visualizer</title>
+  </head>
+  <body>
+    <!-- Navbar starts  -->
+    <nav class="navbar navbar-expand bg-dark navbar-dark">
+      <div class="container">
+        <button
+          class="btn btn-dark"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <span class="toggler-button">Complexity</span>
+        </button>
+        <a
+          href="../index.html"
+          class="navbar-brand page-header navbar-page-header"
+        >
+          <span class="page-header-left">DS & Algo</span>
+          <span class="nav-page-header-right">Visualizer</span>
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="../Register/register.html" class="nav-link">Register</a>
+          </li>
+          <li class="nav-item">
+            <a href="../Login/login.html" class="nav-link">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Left-sidebard starts  -->
+    <div
+      class="offcanvas offcanvas-start bg-dark"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <h5
+          class="offcanvas-title text-white"
+          id="offcanvasWithBothOptionsLabel"
+        ></h5>
+
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body text-white">
+        <div class="card" style="width: 22rem">
+          <div class="card-body">
+            <h5 class="card-title text-dark">Stack Complexity Anlysis</h5>
+            <h6 class="card-subtitle mt-4 mb-2 text-muted">
+              Insertion complexity: O(1)
+            </h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Deletion complexity: O(1)
+            </h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Accessing complexity: O(N)
+            </h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Searching complexity: O(N)
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Left-sidebard ends  -->
+
+    <!-- Stack Container  -->
+    <div class="flex-container">
+      <div class="stack-container1">
+        <input
+          type="text"
+          name=""
+          id="input_field"
+          class="form-control form-control-lg fs-4 text-center bg-dark bg-opacity-50 text-white fw-bold border-0 rounded-0 shadow-sm p-3 m-2"
+          required
+          value="Enter a value here"
+          onclick="handleInputField()"
+        />
+        <button class="push-button" onclick="handleAnimationPush()">
+          Push()
+        </button>
+        <button class="pop-button" onclick="handleAnimationPop()">Pop()</button>
+      </div>
+      <div class="stack-container2">
+        <div id="stackIsEmpty" class="stackIsEmpty"><p>Stack is empty!</p></div>
+        <div id="card1" class="card1"><p>10</p></div>
+        <div id="card2"><p>20</p></div>
+        <div id="card3"><p>30</p></div>
+        <div id="card4"><p>40</p></div>
+        <div id="card5"><p>50</p></div>
+        <div id="card6"><p>60</p></div>
+        <div id="card7"><p>70</p></div>
+        <div id="card8"><p>80</p></div>
+        <div id="card9"><p>90</p></div>
+        <div id="card10"><p>100</p></div>
+      </div>
+    </div>
+  </body>
+</html>

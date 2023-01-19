@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DS & Algo Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="home-page.css" />
+    <script src="home-page.js" defer></script>
+
+    <!-- Font utilities Starts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+    </style>
+    <link
+      href="//db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      @import url("//db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro");
+    </style>
+    <!-- Font utilities Ends -->
+
+    <!-- Bootstrap utilities Starts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Bootstrap utilities Ends -->
+  </head>
+  <!-- Main screen starts  -->
+  <body class="main-screen">
+    <!-- Navbar starts  -->
+    <nav class="navbar navbar-expand bg-dark navbar-dark">
+      <div class="container">
+        <a
+          href="index.html"
+          class="navbar-brand page-header navbar-page-header"
+        >
+          <span class="page-header-left">DS & Algo</span>
+          <span class="nav-page-header-right">Visualizer</span>
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="./Register/register.html" class="nav-link">Register</a>
+          </li>
+          <li class="nav-item">
+            <a href="./Login/login.html" class="nav-link">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
+
+    <!-- Page heading starts  -->
+    <div class="page-heading container">
+      <h2 class="page-header">
+        <span class="page-header-left">DS & Algo</span>
+        <span class="page-header-right">Visualizer</span>
+      </h2>
+      <p>Visualize any data structure or algorithm through animation</p>
+    </div>
+    <!-- Page heading ends  -->
+
+    <!-- Box of the cards starts -->
+    <div class="container">
+      <!-- Row-1 starts  -->
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card" onclick="loadCalc()">
+            <img class="card-img-top" src="img/calculator.gif" />
+            <div class="card-body">
+              <h4 class="card-title">Programmer's Calculator</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card" onclick="loadStack()">
+            <img class="card-img-top" src="img/stack.gif" />
+            <div class="card-body">
+              <h4 class="card-title">Stack</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card" onclick="loadQueue()">
+            <img class="card-img-top" src="img/queue.gif" />
+            <div class="card-body">
+              <h4 class="card-title">Queue</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card" onclick="loadTreeProp()">
+            <img class="card-img-top" src="img/tree.gif" />
+            <div class="card-body">
+              <h4 class="card-title">Tree Properties</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row-1 Ends  -->
+
+      <!-- Row-2 starts  -->
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="bfs-card card" onclick="loadBfsAlgo()">
+            <img class="card-img-top" src="img/bfs.gif" style="height: 220px" />
+            <div class="card-body">
+              <h4 class="card-title">Breadth First Search</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card">
+            <img class="card-img-top" src="img/dummy_image.png" />
+            <div class="card-body">
+              <h4 class="card-title">Map</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="img/sorting.PNG"
+              style="height: 220px"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Sorting</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="img/binary-search.gif"
+              style="height: 220px"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Binary Search</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row-2 Ends  -->
+    </div>
+    <!-- Box of the cards ends -->
+  </body>
+  <!-- Main screen ends  -->
+</html>

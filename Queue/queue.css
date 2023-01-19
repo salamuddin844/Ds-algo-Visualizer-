@@ -1,0 +1,874 @@
+:root {
+  --seconds: 1.5s;
+  --margin1: 30%;
+  --margin2: 27%;
+  --margin3: 24%;
+  --margin4: 21%;
+  --margin5: 18%;
+  --margin6: 15%;
+  --margin7: 12%;
+  --margin8: 9%;
+  --margin9: 6%;
+  --margin10: 3%;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: dodgerblue;
+  background-image: linear-gradient(
+    15deg,
+    rgb(0, 162, 255),
+    rgb(119, 0, 255) 100%
+  );
+}
+
+/* Page header customization - starts*/
+.page-heading {
+  text-align: center;
+  padding: 1%;
+}
+
+.page-header {
+  font-family: "Munro", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.page-header-left {
+  color: #003049;
+}
+
+.page-header-right {
+  color: #ffba08;
+}
+
+.color-scheme-1 {
+  color: #54bd68;
+}
+
+.color-scheme-2 {
+  color: #da523c;
+}
+
+.color-scheme-3 {
+  color: #4b65ba;
+}
+
+.color-scheme-4 {
+  color: #d65775;
+}
+.color-scheme-5 {
+  color: #2ebcd2;
+}
+.color-scheme-6 {
+  color: #a9d50e;
+}
+.color-scheme-7 {
+  color: #fe9130;
+}
+
+.page-heading p {
+  font-size: 25px;
+}
+
+.navbar-page-header .page-header-left {
+  color: white;
+}
+
+.navbar-nav > li > a,
+.toggler-button {
+  /* font-family: Roboto; */
+  font-weight: 500;
+  /* font-weight: bolder; */
+}
+
+.page-title {
+  /* font-family: Roboto; */
+  font-family: sans-serif;
+  font-weight: 500;
+}
+/* Page header customization - ends */
+
+/* Stack Container  Starts */
+.stack-container1 {
+  /* background-color: rgba(0, 0, 0, 0.459); */
+  /* margin: 0% auto; */
+  margin: 2%;
+  margin-top: 18%;
+  margin-left: 25%;
+  width: 20vw;
+  height: 15vh;
+}
+.stack-container2 {
+  background-color: rgba(0, 0, 0, 0.459);
+  /* margin: 0% auto; */
+  margin: 2%;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 20vw;
+  height: 68vh;
+}
+
+/* Stack Cards Starts*/
+#card1,
+#card2,
+#card3,
+#card4,
+#card5,
+#card6,
+#card7,
+#card8,
+#card9,
+#card10 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  width: 18%;
+  height: 5%;
+  padding-bottom: 5px;
+}
+
+#card1 {
+  position: absolute;
+  margin: 0% auto;
+  margin-top: 30%;
+  margin-left: 1%;
+  opacity: 0%;
+  transition: 2s;
+  background-color: #9bccdd;
+}
+.card1-animate-forward {
+  animation-name: animateCardPush1;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.card1-animate-reverse {
+  animation-name: animateCardPop1;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#card2 {
+  position: absolute;
+  margin: 0% auto;
+  margin-top: 27%;
+  margin-left: 1%;
+  opacity: 0%;
+  transition: 2s;
+  background-color: #58badd;
+}
+.card2-animate-forward {
+  animation-name: animateCardPush2;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.card2-animate-reverse {
+  animation-name: animateCardPop2;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#card3 {
+  position: absolute;
+  margin: 0% auto;
+  margin-top: 24%;
+  margin-left: 1%;
+  opacity: 0%;
+  transition: 2s;
+  background-color: #00a1e0;
+}
+.card3-animate-forward {
+  animation-name: animateCardPush3;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.card3-animate-reverse {
+  animation-name: animateCardPop3;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#card4 {
+  position: absolute;
+  margin: 0% auto;
+  margin-top: 21%;
+  margin-left: 1%;
+  opacity: 0%;
+  transition: 2s;
+  background-color: #9bccdd;
+}
+.card4-animate-forward {
+  animation-name: animateCardPush4;
+  animation-duration: 1.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.card4-animate-reverse {
+  animation-name: animateCardPop4;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#card5 {
+  position: absolute;
+  margin: 0% auto;
+  margin-top: 18%;
+  margin-left: 1%;
+  opacity: 0%;
+  transition: 2s;
+  background-color: #58badd;
+}
+.card5-animate-forward {
+  animation-name: animateCardPush5;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.card5-animate-reverse {
+  animation-name: animateCardPop5;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#card6 {
+  position: absolute;
+  margin: 0% auto;
+  margin-top: 15%;
+  margin-left: 1%;
+  opacity: 0%;
+  transition: 2s;
+  background-color: #00a1e0;
+}
+.card6-animate-forward {
+  animation-name: animateCardPush6;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.card6-animate-reverse {
+  animation-name: animateCardPop6;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#card7 {
+  position: absolute;
+  margin: 0% auto;
+  margin-top: 12%;
+  margin-left: 1%;
+  opacity: 0%;
+  transition: 2s;
+  background-color: #9bccdd;
+}
+.card7-animate-forward {
+  animation-name: animateCardPush7;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.card7-animate-reverse {
+  animation-name: animateCardPop7;
+  animation-duration: 1.1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#card8 {
+  position: absolute;
+  margin: 0% auto;
+  margin-top: 9%;
+  margin-left: 1%;
+  opacity: 0%;
+  transition: 2s;
+  background-color: #58badd;
+}
+.card8-animate-forward {
+  animation-name: animateCardPush8;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.card8-animate-reverse {
+  animation-name: animateCardPop8;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+#card9 {
+  position: absolute;
+  margin: 0% auto;
+  margin-top: 6%;
+  margin-left: 1%;
+  opacity: 0%;
+  transition: 2s;
+  background-color: #00a1e0;
+}
+.card9-animate-forward {
+  animation-name: animateCardPush9;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.card9-animate-reverse {
+  animation-name: animateCardPop9;
+  animation-duration: 1.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+#card10 {
+  position: absolute;
+  margin: 0% auto;
+  margin-top: 3%;
+  margin-left: 1%;
+  opacity: 0%;
+  transition: 2s;
+  background-color: #9bccdd;
+}
+.card10-animate-forward {
+  animation-name: animateCardPush10;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.card10-animate-reverse {
+  animation-name: animateCardPop10;
+  animation-duration: 1.4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.push-button,
+.pop-button {
+  /* background-image: linear-gradient(15deg, #e9c46a, #f4a261 100%); */
+  background-color: white;
+  width: 100%;
+  margin: 2%;
+  padding: 4%;
+  font-weight: bold;
+  border: 1px solid black;
+  font-size: 1.3em;
+}
+
+@keyframes animateCardPush1 {
+  0% {
+    margin-top: 0%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: var(--margin1);
+    opacity: 100%;
+  }
+}
+@keyframes animateCardPop1 {
+  0% {
+    margin-top: var(--margin1);
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+
+  70% {
+    opacity: 50%;
+  }
+
+  100% {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+}
+
+@keyframes animateCardPush2 {
+  0% {
+    margin-top: 0%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: var(--margin2);
+    opacity: 100%;
+  }
+}
+@keyframes animateCardPop2 {
+  0% {
+    margin-top: var(--margin2);
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+
+  70% {
+    opacity: 50%;
+  }
+
+  100% {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+}
+
+@keyframes animateCardPush3 {
+  0% {
+    margin-top: 0%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: var(--margin3);
+    opacity: 100%;
+  }
+}
+@keyframes animateCardPop3 {
+  0% {
+    margin-top: var(--margin3);
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+
+  70% {
+    opacity: 50%;
+  }
+
+  100% {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+}
+
+@keyframes animateCardPush4 {
+  0% {
+    margin-top: 0%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: var(--margin4);
+    opacity: 100%;
+  }
+}
+@keyframes animateCardPop4 {
+  0% {
+    margin-top: var(--margin4);
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+
+  70% {
+    opacity: 50%;
+  }
+
+  100% {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+}
+
+@keyframes animateCardPush5 {
+  0% {
+    margin-top: 0%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: var(--margin5);
+    opacity: 100%;
+  }
+}
+@keyframes animateCardPop5 {
+  0% {
+    margin-top: var(--margin5);
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+
+  70% {
+    opacity: 50%;
+  }
+
+  100% {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+}
+
+@keyframes animateCardPush6 {
+  0% {
+    margin-top: 0%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: var(--margin6);
+    opacity: 100%;
+  }
+}
+@keyframes animateCardPop6 {
+  0% {
+    margin-top: var(--margin6);
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+
+  70% {
+    opacity: 50%;
+  }
+
+  100% {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+}
+
+@keyframes animateCardPush7 {
+  0% {
+    margin-top: 0%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: var(--margin7);
+    opacity: 100%;
+  }
+}
+@keyframes animateCardPop7 {
+  0% {
+    margin-top: var(--margin7);
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+
+  70% {
+    opacity: 50%;
+  }
+
+  100% {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+}
+
+@keyframes animateCardPush8 {
+  0% {
+    margin-top: 0%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: var(--margin8);
+    opacity: 100%;
+  }
+}
+@keyframes animateCardPop8 {
+  0% {
+    margin-top: var(--margin8);
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+
+  70% {
+    opacity: 50%;
+  }
+
+  100% {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+}
+
+@keyframes animateCardPush9 {
+  0% {
+    margin-top: 0%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: var(--margin9);
+    opacity: 100%;
+  }
+}
+@keyframes animateCardPop9 {
+  0% {
+    margin-top: var(--margin9);
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+
+  70% {
+    opacity: 50%;
+  }
+
+  100% {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+}
+
+@keyframes animateCardPush10 {
+  0% {
+    margin-top: 0%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: var(--margin10);
+    opacity: 100%;
+  }
+}
+@keyframes animateCardPop10 {
+  0% {
+    margin-top: var(--margin10);
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+
+  70% {
+    opacity: 50%;
+  }
+
+  100% {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+}
+
+/* Partial push of the cards */
+
+.addpartialPush2 {
+  animation-name: partialPush2;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.addpartialPush3 {
+  animation-name: partialPush3;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.addpartialPush4 {
+  animation-name: partialPush4;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.addpartialPush5 {
+  animation-name: partialPush5;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.addpartialPush6 {
+  animation-name: partialPush6;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.addpartialPush7 {
+  animation-name: partialPush7;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.addpartialPush8 {
+  animation-name: partialPush8;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.addpartialPush9 {
+  animation-name: partialPush9;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.addpartialPush10 {
+  animation-name: partialPush10;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes partialPush2 {
+  0% {
+    margin-top: 27%;
+    opacity: 100%;
+  }
+  100% {
+    margin-top: 30%;
+    opacity: 100%;
+  }
+}
+@keyframes partialPush3 {
+  0% {
+    margin-top: 24%;
+    opacity: 100%;
+  }
+  100% {
+    margin-top: 27%;
+    opacity: 100%;
+  }
+}
+@keyframes partialPush4 {
+  0% {
+    margin-top: 21%;
+    opacity: 100%;
+  }
+  100% {
+    margin-top: 24%;
+    opacity: 100%;
+  }
+}
+@keyframes partialPush5 {
+  0% {
+    margin-top: 18%;
+    opacity: 100%;
+  }
+  100% {
+    margin-top: 21%;
+    opacity: 100%;
+  }
+}
+@keyframes partialPush6 {
+  0% {
+    margin-top: 15%;
+    opacity: 100%;
+  }
+  100% {
+    margin-top: 18%;
+    opacity: 100%;
+  }
+}
+@keyframes partialPush7 {
+  0% {
+    margin-top: 12%;
+    opacity: 100%;
+  }
+  100% {
+    margin-top: 15%;
+    opacity: 100%;
+  }
+}
+@keyframes partialPush8 {
+  0% {
+    margin-top: 9%;
+    opacity: 100%;
+  }
+  100% {
+    margin-top: 12%;
+    opacity: 100%;
+  }
+}
+@keyframes partialPush9 {
+  0% {
+    margin-top: 6%;
+    opacity: 100%;
+  }
+  100% {
+    margin-top: 9%;
+    opacity: 100%;
+  }
+}
+@keyframes partialPush10 {
+  0% {
+    margin-top: 3%;
+    opacity: 100%;
+  }
+  100% {
+    margin-top: 6%;
+    opacity: 100%;
+  }
+}
+
+/* Stack empty utilities  */
+.stackIsEmpty {
+  color: rgba(185, 185, 185, 0.329);
+  font-size: 2.5em;
+  font-weight: bolder;
+  margin-left: 8%;
+  margin-top: 70%;
+}

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calculator.css" />
+    <script src="calculator.js" defer></script>
+
+    <!-- fonts utilites starts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- fonts utilites ends -->
+
+    <!-- Font utilities Starts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+    </style>
+    <link
+      href="//db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      @import url("//db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro");
+    </style>
+    <!-- Font utilities Ends -->
+
+    <!-- Bootstrap utilities Starts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Bootstrap utilities Ends -->
+
+    <title>Algo Based Calculator</title>
+  </head>
+  <body>
+    <!-- Navbar starts  -->
+    <nav class="navbar navbar-expand bg-dark navbar-dark">
+      <div class="container">
+        <button
+          class="btn btn-dark"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <span class="toggler-button">Options</span>
+        </button>
+        <a
+          href="../index.html"
+          class="navbar-brand page-header navbar-page-header"
+        >
+          <span class="page-header-left">DS & Algo</span>
+          <span class="nav-page-header-right">Visualizer</span>
+        </a>
+        <ul class="navbar-nav">
+          <!-- <h2
+                class="nav-item page-title navbar-brand page-header navbar-page-header"
+              >
+                Breadth Fast Search
+              </h2> -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../Register/register.html" class="nav-link">Register</a>
+            </li>
+            <li class="nav-item">
+              <a href="../Login/login.html" class="nav-link">Login</a>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
+
+    <div
+      class="mx-auto mt-5 w-100 rounded p-3 d-grid bg-dark bg-opacity-50 shadow-lg"
+      style="max-width: 780px"
+    >
+      <input
+        type="text"
+        name=""
+        id="input_field"
+        class="form-control form-control-lg fs-3 text-end bg-dark bg-opacity-50 text-white border-0 rounded shadow-sm p-3"
+        required
+        value="0"
+      />
+      <div class="row g-2 row-cols-4 mt-1">
+        <!-- Row-0 starts  -->
+        <div class="col-12">
+          <button
+            id="btn29"
+            class="btn w-100 shadow-lg text-light rounded-0 fw-bolder fs-5"
+            onclick="clearScreen()"
+          >
+            Clear Screen
+          </button>
+        </div>
+        <!-- Row-0 ends -->
+
+        <!-- Row-1 starts  -->
+        <div class="col">
+          <button
+            id="btn1"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="gcdListener()"
+          >
+            GCD (X, Y)
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn2"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="lcmListener()"
+          >
+            LCM (X, Y)
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn3"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="primeCheck()"
+          >
+            Prime Check (N)
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn4"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="fibonacciListener()"
+          >
+            Nth Fibonacci
+          </button>
+        </div>
+
+        <!-- Row-1 ends -->
+
+        <!-- Row-2 starts  -->
+        <div class="col">
+          <button
+            id="btn5"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="mobiusFuncListener()"
+          >
+            Mobius (N)
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn6"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="legrendsFormulaListener()"
+          >
+            Legrends (N, P)
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn28"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="sumOfDivisorsListener()"
+          >
+            Sum of Divisors
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn7"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="eulerTotientListener()"
+          >
+            Phi (N)
+          </button>
+        </div>
+        <!-- Row-2 ends -->
+
+        <!-- Row-3 starts  -->
+        <div class="col">
+          <button
+            id="btn8"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="numberOfDivListener()"
+          >
+            Num of Divisors
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn9"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="catalanListener()"
+          >
+            Nth Catalan
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn10"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="stirlingNumberListener()"
+          >
+            Stirling (R, N)
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn11"
+            class="btn w-100 shadow-lg text-light rounded-0 fw-bolder fs-5"
+            onclick="backspaceDelete()"
+          >
+            Delete
+          </button>
+        </div>
+        <!-- Row-3 ends -->
+
+        <!-- Row-4 starts  -->
+        <div class="col">
+          <button
+            id="btn12"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('7')"
+          >
+            7
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn13"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('8')"
+          >
+            8
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn14"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('9')"
+          >
+            9
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn15"
+            class="btn w-100 shadow-lg text-light rounded-0 fw-bolder fs-5"
+            onclick="addToScreen('+')"
+          >
+            +
+          </button>
+        </div>
+        <!-- Row-4 ends -->
+
+        <!-- Row-5 starts  -->
+        <div class="col">
+          <button
+            id="btn16"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('4')"
+          >
+            4
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn17"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('5')"
+          >
+            5
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn18"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('6')"
+          >
+            6
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn19"
+            class="btn w-100 shadow-lg text-light rounded-0 fw-bolder fs-5"
+            onclick="addToScreen('-')"
+          >
+            -
+          </button>
+        </div>
+        <!-- Row-5 ends -->
+
+        <!-- Row-6 starts  -->
+        <div class="col">
+          <button
+            id="btn20"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('1')"
+          >
+            1
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn21"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('2')"
+          >
+            2
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn22"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('3')"
+          >
+            3
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn23"
+            class="btn w-100 shadow-lg text-light rounded-0 fw-bolder fs-5"
+            onclick="addToScreen('*')"
+          >
+            x
+          </button>
+        </div>
+        <!-- Row-6 ends -->
+
+        <!-- Row-7 starts  -->
+        <div class="col">
+          <button
+            id="btn24"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('.')"
+          >
+            .
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn25"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-light fw-bolder fs-5"
+            onclick="addToScreen('0')"
+          >
+            0
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn26"
+            class="btn w-100 shadow-lg text-light rounded-0 fw-bolder fs-5"
+            onclick="evalExpression()"
+          >
+            =
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="btn27"
+            class="btn w-100 shadow-lg text-light rounded-0 fw-bolder fs-5"
+            onclick="addToScreen('/')"
+          >
+            /
+          </button>
+        </div>
+        <!-- Row-7 ends -->
+
+        <!-- Row-8 starts -->
+        <div class="col-12">
+          <button
+            id="btn25"
+            class="btn w-100 shadow-lg text-dark rounded-0 bg-warning fw-bolder fs-5"
+            onclick="addSpace()"
+          >
+            Space
+          </button>
+        </div>
+        <!-- Row-8 ends -->
+      </div>
+    </div>
+  </body>
+</html>

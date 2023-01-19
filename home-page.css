@@ -1,0 +1,74 @@
+body {
+  overflow-x: hidden;
+}
+
+/* Main screen customization - starts  */
+.main-screen {
+  background: #e5e6e4;
+}
+/* Main screen customization - ends  */
+
+/* Page header customization - starts*/
+.page-heading {
+  text-align: center;
+  padding: 1%;
+}
+
+.page-header {
+  font-family: "Munro", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.page-header-left {
+  color: #003049;
+}
+
+.page-header-right {
+  color: #ffba08;
+}
+
+.color-scheme-1 {
+  color: #54bd68;
+}
+
+.color-scheme-2 {
+  color: #da523c;
+}
+
+.color-scheme-3 {
+  color: #4b65ba;
+}
+
+.color-scheme-4 {
+  color: #d65775;
+}
+.color-scheme-5 {
+  color: #2ebcd2;
+}
+.color-scheme-6 {
+  color: #a9d50e;
+}
+.color-scheme-7 {
+  color: #fe9130;
+}
+
+.page-heading p {
+  font-size: 25px;
+}
+
+.navbar-page-header .page-header-left {
+  color: white;
+}
+
+.navbar-nav > li > a {
+  /* font-family: Roboto; */
+  font-weight: 500;
+}
+/* Page header customization - ends */
+
+/* Each row customization - starts  */
+.row {
+  padding: 1% 0;
+}
+/* Each row customization - ends */

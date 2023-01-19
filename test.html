@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .color-scheme-1 {
+        background-color: #e76f51;
+      }
+
+      .color-scheme-2 {
+        background-color: #ffb703;
+      }
+
+      .color-scheme-3 {
+        background-color: #2a9d8f;
+      }
+
+      .color-scheme-4 {
+        background-color: #f4a261;
+      }
+      .color-scheme-5 {
+        background-color: #d62828;
+      }
+      .color-scheme-6 {
+        background-color: #70e000;
+      }
+      .color-scheme-7 {
+        background-color: #662e9b;
+      }
+      .screen {
+        height: 100vh;
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="screen"></div>
+    <script>
+      var listOfColorSchemes = [
+        "color-scheme-1",
+        "color-scheme-2",
+        "color-scheme-3",
+        "color-scheme-4",
+        "color-scheme-5",
+        "color-scheme-6",
+        "color-scheme-7",
+      ];
+      var randomNum = Math.floor(Math.random() * listOfColorSchemes.length);
+      var screen = document.querySelector(".screen");
+      screen.classList.add(listOfColorSchemes[randomNum]);
+    </script>
+  </body>
+</html>
